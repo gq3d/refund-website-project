@@ -276,15 +276,15 @@ const AssetRecoveryPage = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Досудебное урегулирование</span>
-                  <span className="font-semibold">от $1,499</span>
+                  <span className="font-semibold">от 149 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Подготовка иска</span>
-                  <span className="font-semibold">от $2,999</span>
+                  <span className="font-semibold">от 299 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Судебное представительство</span>
-                  <span className="font-semibold">от $5,999</span>
+                  <span className="font-semibold">от 599 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Международный арбитраж</span>
