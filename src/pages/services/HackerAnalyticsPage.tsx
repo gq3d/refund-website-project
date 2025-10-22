@@ -2,17 +2,13 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const HackerAnalyticsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
       <div className="container py-12">
-        <Link to="/">
-          <Button variant="ghost" className="mb-8">
-            <Icon name="ArrowLeft" className="mr-2 h-4 w-4" />
-            Назад
-          </Button>
-        </Link>
+        <Breadcrumbs />
 
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
