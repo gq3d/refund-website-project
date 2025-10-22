@@ -1,9 +1,11 @@
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const WarningSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
-    <section className="py-20 bg-destructive/5 border-y-4 border-destructive">
+    <section ref={ref} className={`py-20 bg-destructive/5 border-y-4 border-destructive scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">

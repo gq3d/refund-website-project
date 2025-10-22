@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const TeamSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const team = [
     {
       icon: 'Scale',
@@ -21,7 +23,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-muted/30">
+    <section ref={ref} id="team" className={`py-20 bg-muted/30 scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">

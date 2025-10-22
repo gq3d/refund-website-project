@@ -1,9 +1,11 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const HeroSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white py-24 md:py-32">
+    <section ref={ref} className={`relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-white py-24 md:py-32 scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDEzNGgxMnYxMkgzNnptNDggNDhoMTJ2MTJIODR6bS00OC00OGgxMnYxMkgzNnptNDggNDhoMTJ2MTJIODR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-in">

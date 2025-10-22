@@ -1,7 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const CasesSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const cases = [
     {
       title: 'Разблокировка на Binance',
@@ -30,7 +32,7 @@ const CasesSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section ref={ref} className={`py-20 bg-white scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="container">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">

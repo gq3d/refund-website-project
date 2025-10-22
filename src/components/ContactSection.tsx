@@ -1,9 +1,11 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ContactSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
-    <section id="contact" className="py-32 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white">
+    <section ref={ref} id="contact" className={`py-32 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in space-y-8">

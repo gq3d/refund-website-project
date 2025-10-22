@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const DirectionsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
-    <section id="directions" className="py-20 bg-muted/30">
+    <section ref={ref} id="directions" className={`py-20 bg-muted/30 scroll-animate ${isVisible ? 'visible' : ''}`}>
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
