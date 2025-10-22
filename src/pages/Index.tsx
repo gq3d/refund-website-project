@@ -538,10 +538,10 @@ const Index = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
-                <a href="tel:+70000000000" className="inline-block">
+                <a href="tel:+79015144440" className="inline-block">
                   <Button size="lg" variant="secondary" className="text-xl px-10 py-8 h-auto">
                     <Icon name="Phone" className="mr-3 h-6 w-6" />
-                    +7 (___) ___-__-__
+                    +7 (901) 514-44-40
                   </Button>
                 </a>
                 <a href="mailto:info@example.com" className="inline-block">
