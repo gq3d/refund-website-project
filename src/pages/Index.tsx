@@ -332,7 +332,126 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="team" className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5">
+        <div className="container">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Результаты в цифрах</h2>
+            <div className="h-1 w-24 bg-secondary mx-auto mb-6"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              За годы работы мы вернули миллионы долларов клиентам по всему миру
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {[
+              { value: '2008', label: 'Год основания', icon: 'Calendar' },
+              { value: '$47M+', label: 'Возвращено средств', icon: 'DollarSign' },
+              { value: '1,200+', label: 'Успешных кейсов', icon: 'TrendingUp' },
+              { value: '94%', label: 'Успешность', icon: 'Award' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+                <Card className="border-primary/20 hover:shadow-xl transition-all hover:scale-105">
+                  <CardContent className="pt-8 pb-8">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <Icon name={stat.icon} className="h-8 w-8 text-primary" />
+                    </div>
+                    <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
+                    <p className="text-muted-foreground font-medium">{stat.label}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16 animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Успешные кейсы</h2>
+              <div className="h-1 w-24 bg-secondary mx-auto mb-6"></div>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Реальные истории возврата криптовалютных активов наших клиентов
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'Разблокировка на Binance',
+                  amount: '$280,000',
+                  crypto: 'USDT',
+                  duration: '12 дней',
+                  description: 'Клиент столкнулся с AML-блокировкой после покупки USDT через обменник. Провели анализ транзакций, подготовили отчёт и добились снятия блокировки.',
+                  icon: 'CheckCircle2',
+                },
+                {
+                  title: 'Возврат с Bybit',
+                  amount: '15.4 BTC',
+                  crypto: 'Bitcoin',
+                  duration: '21 день',
+                  description: 'Биржа заблокировала средства из-за подозрения в происхождении. Юридическое сопровождение и доказательная база помогли вернуть активы.',
+                  icon: 'CheckCircle2',
+                },
+                {
+                  title: 'Международный розыск',
+                  amount: '€450,000',
+                  crypto: 'ETH + Fiat',
+                  duration: '4 месяца',
+                  description: 'Средства были выведены мошенниками в оффшор. Провели расследование, установили бенефициаров и вернули 87% от суммы через арбитраж.',
+                  icon: 'CheckCircle2',
+                },
+              ].map((caseItem, index) => (
+                <Card key={index} className="hover:shadow-xl transition-all animate-fade-in border-accent/20" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <CardHeader>
+                    <div className="flex items-start justify-between mb-2">
+                      <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                        <Icon name={caseItem.icon} className="h-6 w-6 text-accent" />
+                      </div>
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-primary">{caseItem.amount}</div>
+                        <div className="text-sm text-muted-foreground">{caseItem.crypto}</div>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl">{caseItem.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-foreground/80 text-sm">{caseItem.description}</p>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t">
+                      <Icon name="Clock" className="h-4 w-4" />
+                      <span>Срок: {caseItem.duration}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20 inline-block">
+                <CardContent className="pt-6 px-8">
+                  <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="flex-1">
+                      <p className="text-lg font-semibold text-foreground mb-2">
+                        У вас похожая ситуация?
+                      </p>
+                      <p className="text-muted-foreground">
+                        Мы проанализируем ваш случай бесплатно
+                      </p>
+                    </div>
+                    <Button size="lg" className="bg-secondary hover:bg-secondary/90">
+                      <Icon name="MessageSquare" className="mr-2 h-5 w-5" />
+                      Получить консультацию
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="py-20 bg-muted/30">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 animate-fade-in">
