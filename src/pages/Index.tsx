@@ -303,9 +303,9 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               { value: '2008', label: 'Год основания', icon: 'Calendar' },
-              { value: '$47M+', label: 'Возвращено средств', icon: 'DollarSign' },
-              { value: '1,200+', label: 'Успешных кейсов', icon: 'TrendingUp' },
-              { value: '94%', label: 'Успешность', icon: 'Award' },
+              { value: '$2.4M+', label: 'Возвращено средств', icon: 'DollarSign' },
+              { value: '180+', label: 'Успешных кейсов', icon: 'TrendingUp' },
+              { value: '87%', label: 'Успешность', icon: 'Award' },
             ].map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
                 <Card className="border-primary/20 hover:shadow-xl transition-all hover:scale-105">
@@ -338,26 +338,26 @@ const Index = () => {
               {[
                 {
                   title: 'Разблокировка на Binance',
-                  amount: '$280,000',
+                  amount: '$8,500',
                   crypto: 'USDT',
-                  duration: '12 дней',
+                  duration: '14 дней',
                   description: 'Клиент столкнулся с AML-блокировкой после покупки USDT через обменник. Провели анализ транзакций, подготовили отчёт и добились снятия блокировки.',
                   icon: 'CheckCircle2',
                 },
                 {
                   title: 'Возврат с Bybit',
-                  amount: '15.4 BTC',
+                  amount: '0.3 BTC',
                   crypto: 'Bitcoin',
-                  duration: '21 день',
+                  duration: '18 дней',
                   description: 'Биржа заблокировала средства из-за подозрения в происхождении. Юридическое сопровождение и доказательная база помогли вернуть активы.',
                   icon: 'CheckCircle2',
                 },
                 {
-                  title: 'Международный розыск',
-                  amount: '€450,000',
-                  crypto: 'ETH + Fiat',
-                  duration: '4 месяца',
-                  description: 'Средства были выведены мошенниками в оффшор. Провели расследование, установили бенефициаров и вернули 87% от суммы через арбитраж.',
+                  title: 'Снятие ограничений OKX',
+                  amount: '$12,000',
+                  crypto: 'ETH',
+                  duration: '22 дня',
+                  description: 'Аккаунт был ограничен после получения средств с миксера. Провели работу с техподдержкой биржи и добились разблокировки.',
                   icon: 'CheckCircle2',
                 },
               ].map((caseItem, index) => (
