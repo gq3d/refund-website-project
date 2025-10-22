@@ -72,7 +72,7 @@ const InternationalSearchPage = () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="DollarSign" className="h-4 w-4 text-primary" />
-                      $23M возвращено клиентам
+                      2,3 млрд₽ возвращено клиентам
                     </li>
                     <li className="flex items-center gap-2">
                       <Icon name="Globe" className="h-4 w-4 text-primary" />
@@ -328,7 +328,7 @@ const InternationalSearchPage = () => {
                       <Icon name="CheckCircle" className="h-6 w-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <p className="font-semibold mb-1">Возврат $470K из Сингапура</p>
+                      <p className="font-semibold mb-1">Возврат 47 млн₽ из Сингапура</p>
                       <p className="text-sm text-muted-foreground">
                         Клиент потерял BTC при фишинговой атаке. Средства ушли на Binance Singapore. 
                         Локализовали хакера, подали заявление в полицию, заморозили счёт. Вернули 85% через 3 месяца.
@@ -347,7 +347,7 @@ const InternationalSearchPage = () => {
                     <div>
                       <p className="font-semibold mb-1">Блокировка мошенников в Турции</p>
                       <p className="text-sm text-muted-foreground">
-                        Скам-проект с поддельным ICO. Организаторы скрылись в Турции с $2M. 
+                        Скам-проект с поддельным ICO. Организаторы скрылись в Турции с 200 млн₽. 
                         Нашли через OSINT, подали в турецкую полицию, заблокировали банковские счета. Частичный возврат.
                       </p>
                     </div>
@@ -378,19 +378,19 @@ const InternationalSearchPage = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Первичный анализ и трейсинг</span>
-                  <span className="font-semibold">$999</span>
+                  <span className="font-semibold">99 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Локализация и идентификация</span>
-                  <span className="font-semibold">от $2,999</span>
+                  <span className="font-semibold">от 299 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Блокировка активов</span>
-                  <span className="font-semibold">от $4,999</span>
+                  <span className="font-semibold">от 499 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Полный цикл возврата</span>
-                  <span className="font-semibold">от $9,999 + 15-25% от возвращённых средств</span>
+                  <span className="font-semibold">от 999 000₽ + 15-25% от возвращённых средств</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">

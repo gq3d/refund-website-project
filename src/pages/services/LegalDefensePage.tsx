@@ -361,23 +361,23 @@ const LegalDefensePage = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Консультация (1 час)</span>
-                  <span className="font-semibold">от $199</span>
+                  <span className="font-semibold">от 19 900₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Подготовка документов</span>
-                  <span className="font-semibold">от $999</span>
+                  <span className="font-semibold">от 99 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Представительство в суде (1 инстанция)</span>
-                  <span className="font-semibold">от $4,999</span>
+                  <span className="font-semibold">от 499 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Апелляция/Кассация</span>
-                  <span className="font-semibold">от $2,999</span>
+                  <span className="font-semibold">от 299 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Международный арбитраж</span>
-                  <span className="font-semibold">от $14,999</span>
+                  <span className="font-semibold">от 1 499 000₽</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4">

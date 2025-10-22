@@ -221,7 +221,7 @@ const AmlAnalysisPage = () => {
                   <CardTitle>Экспресс-анализ</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold text-primary mb-2">от $99</p>
+                  <p className="text-3xl font-bold text-primary mb-2">от 9 900₽</p>
                   <p className="text-muted-foreground mb-4">Срок: 24 часа</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
@@ -248,7 +248,7 @@ const AmlAnalysisPage = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold text-primary mb-2">от $299</p>
+                  <p className="text-3xl font-bold text-primary mb-2">от 29 900₽</p>
                   <p className="text-muted-foreground mb-4">Срок: 2-3 дня</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">

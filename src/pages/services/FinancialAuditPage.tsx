@@ -255,7 +255,7 @@ const FinancialAuditPage = () => {
                   <CardTitle className="text-lg">Базовый</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold text-primary mb-2">$499</p>
+                  <p className="text-3xl font-bold text-primary mb-2">49 900₽</p>
                   <p className="text-sm text-muted-foreground mb-4">До 50 транзакций</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Срок: 3-5 дней</li>
@@ -274,7 +274,7 @@ const FinancialAuditPage = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold text-primary mb-2">$1,499</p>
+                  <p className="text-3xl font-bold text-primary mb-2">149 000₽</p>
                   <p className="text-sm text-muted-foreground mb-4">До 200 транзакций</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Срок: 5-7 дней</li>
@@ -290,7 +290,7 @@ const FinancialAuditPage = () => {
                   <CardTitle className="text-lg">Корпоративный</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-3xl font-bold text-primary mb-2">от $4,999</p>
+                  <p className="text-3xl font-bold text-primary mb-2">от 499 000₽</p>
                   <p className="text-sm text-muted-foreground mb-4">Без ограничений</p>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Срок: индивидуально</li>

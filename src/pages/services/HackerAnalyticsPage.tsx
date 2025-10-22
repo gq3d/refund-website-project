@@ -313,27 +313,27 @@ const HackerAnalyticsPage = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">OSINT-досье на человека</span>
-                  <span className="font-semibold">от $299</span>
+                  <span className="font-semibold">от 29 900₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Крипто-трейсинг (базовый)</span>
-                  <span className="font-semibold">от $499</span>
+                  <span className="font-semibold">от 49 900₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Деанонимизация адреса</span>
-                  <span className="font-semibold">от $999</span>
+                  <span className="font-semibold">от 99 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Полное расследование кражи</span>
-                  <span className="font-semibold">от $2,499</span>
+                  <span className="font-semibold">от 249 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Корпоративная разведка</span>
-                  <span className="font-semibold">от $1,999</span>
+                  <span className="font-semibold">от 199 000₽</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Цифровая форензика</span>
-                  <span className="font-semibold">от $1,499</span>
+                  <span className="font-semibold">от 149 000₽</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4">

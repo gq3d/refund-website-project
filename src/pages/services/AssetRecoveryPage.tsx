@@ -88,7 +88,7 @@ const AssetRecoveryPage = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="TrendingUp" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      Возвращено более $15M клиентам
+                      Возвращено более 1,5 млрд₽ клиентам
                     </li>
                     <li className="flex items-start gap-2">
                       <Icon name="Users" className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -134,7 +134,7 @@ const AssetRecoveryPage = () => {
                   </p>
                   <div className="flex items-center gap-4 text-sm">
                     <span className="text-muted-foreground">Срок: 7-14 дней</span>
-                    <span className="text-primary font-semibold">от $1,499</span>
+                    <span className="text-primary font-semibold">от 149 000₽</span>
                   </div>
                 </CardContent>
               </Card>
@@ -153,7 +153,7 @@ const AssetRecoveryPage = () => {
                   </p>
                   <div className="flex items-center gap-4 text-sm">
                     <span className="text-muted-foreground">Срок: 5-10 дней</span>
-                    <span className="text-primary font-semibold">от $2,999</span>
+                    <span className="text-primary font-semibold">от 299 000₽</span>
                   </div>
                 </CardContent>
               </Card>
@@ -172,7 +172,7 @@ const AssetRecoveryPage = () => {
                   </p>
                   <div className="flex items-center gap-4 text-sm">
                     <span className="text-muted-foreground">Срок: 1-6 месяцев</span>
-                    <span className="text-primary font-semibold">от $5,999</span>
+                    <span className="text-primary font-semibold">от 599 000₽</span>
                   </div>
                 </CardContent>
               </Card>
@@ -288,7 +288,7 @@ const AssetRecoveryPage = () => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Международный арбитраж</span>
-                  <span className="font-semibold">от $9,999</span>
+                  <span className="font-semibold">от 999 000₽</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-4">

@@ -234,10 +234,10 @@ const RedFlagsPage = () => {
               </h3>
               <div className="space-y-3 text-muted-foreground">
                 <p>• Диагностика и анализ: <span className="font-semibold text-foreground">Бесплатно</span></p>
-                <p>• Простое снятие флагов (1-2 флага): <span className="font-semibold text-foreground">от $499</span></p>
-                <p>• Сложное снятие (3+ флага, санкции): <span className="font-semibold text-foreground">от $1,499</span></p>
-                <p>• Техническая очистка адресов: <span className="font-semibold text-foreground">от $799</span></p>
-                <p>• Юридическое обжалование: <span className="font-semibold text-foreground">от $2,999</span></p>
+                <p>• Простое снятие флагов (1-2 флага): <span className="font-semibold text-foreground">от 49 900₽</span></p>
+                <p>• Сложное снятие (3+ флага, санкции): <span className="font-semibold text-foreground">от 149 000₽</span></p>
+                <p>• Техническая очистка адресов: <span className="font-semibold text-foreground">от 79 900₽</span></p>
+                <p>• Юридическое обжалование: <span className="font-semibold text-foreground">от 299 000₽</span></p>
               </div>
               <p className="text-sm text-muted-foreground mt-4">
                 * Точная стоимость определяется после диагностики
