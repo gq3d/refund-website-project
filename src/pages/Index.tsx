@@ -1,23 +1,8 @@
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Label } from '@/components/ui/label';
 import Icon from '@/components/ui/icon';
-import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-    age18: false,
-    consent: false,
-  });
 
   const services = [
     {
@@ -71,33 +56,6 @@ const Index = () => {
       description: 'Нестандартные расследования и оперативная работа',
     },
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.age18 || !formData.consent) {
-      toast({
-        title: 'Ошибка',
-        description: 'Пожалуйста, подтвердите все согласия',
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    toast({
-      title: 'Заявка отправлена',
-      description: 'Наш эксперт свяжется с вами в ближайшее время',
-    });
-
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      message: '',
-      age18: false,
-      consent: false,
-    });
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -517,113 +475,45 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white">
+      <section id="contact" className="py-32 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white">
         <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Оставьте заявку — и мы начнём действовать</h2>
-              <div className="h-1 w-24 bg-secondary mx-auto mb-6"></div>
-              <p className="text-lg text-white/90">
-                Заполните форму — и наш эксперт свяжется с вами в ближайшее время. Мы быстро проведём первичный анализ 
-                ситуации и предложим конкретный план действий.
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="animate-fade-in space-y-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Позвоните — и мы начнём действовать
+              </h2>
+              <div className="h-1 w-24 bg-secondary mx-auto"></div>
+              
+              <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mt-8">
+                Мы быстро проведём первичный анализ ситуации и предложим конкретный план действий
               </p>
-            </div>
 
-            <Card className="animate-fade-in">
-              <CardContent className="pt-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Имя *</Label>
-                    <Input
-                      id="name"
-                      required
-                      placeholder="Ваше имя"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    />
-                  </div>
+              <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
+                <Button size="lg" variant="secondary" className="text-xl px-10 py-8 h-auto">
+                  <Icon name="Phone" className="mr-3 h-6 w-6" />
+                  +7 (___) ___-__-__
+                </Button>
+                <Button size="lg" variant="outline" className="text-xl px-10 py-8 h-auto bg-white/10 hover:bg-white/20 border-white/30 text-white">
+                  <Icon name="Mail" className="mr-3 h-6 w-6" />
+                  info@example.com
+                </Button>
+              </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      required
-                      placeholder="+7 (___) ___-__-__"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Сообщение (необязательно)</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Опишите вашу ситуацию..."
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <Checkbox
-                        id="age18"
-                        checked={formData.age18}
-                        onCheckedChange={(checked) => setFormData({ ...formData, age18: checked as boolean })}
-                      />
-                      <Label htmlFor="age18" className="text-sm font-normal cursor-pointer">
-                        Я подтверждаю, что на момент отправки формы мне исполнилось 18 лет
-                      </Label>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Checkbox
-                        id="consent"
-                        checked={formData.consent}
-                        onCheckedChange={(checked) => setFormData({ ...formData, consent: checked as boolean })}
-                      />
-                      <Label htmlFor="consent" className="text-sm font-normal cursor-pointer">
-                        Я даю согласие на обработку персональных данных
-                      </Label>
-                    </div>
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full bg-secondary hover:bg-secondary/90">
-                    <Icon name="Send" className="mr-2 h-5 w-5" />
-                    Отправить заявку
-                  </Button>
-                </form>
-
-                <div className="mt-8 pt-8 border-t space-y-3 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Icon name="Lock" className="h-4 w-4 text-accent" />
-                    <span>⛓️ Полная конфиденциальность</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Brain" className="h-4 w-4 text-accent" />
-                    <span>🧠 Работают специалисты с практикой в правоохранительных органах и IT-разведке</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="Target" className="h-4 w-4 text-accent" />
-                    <span>🎯 Цель — результат. Промедление недопустимо</span>
-                  </div>
+              <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-16 pt-12 border-t border-white/20">
+                <div className="space-y-2">
+                  <Icon name="Lock" className="h-8 w-8 text-secondary mx-auto" />
+                  <p className="text-white/90 font-medium">Полная конфиденциальность</p>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="space-y-2">
+                  <Icon name="Brain" className="h-8 w-8 text-secondary mx-auto" />
+                  <p className="text-white/90 font-medium">Эксперты с опытом в спецслужбах</p>
+                </div>
+                <div className="space-y-2">
+                  <Icon name="Target" className="h-8 w-8 text-secondary mx-auto" />
+                  <p className="text-white/90 font-medium">Результат — наша цель</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
