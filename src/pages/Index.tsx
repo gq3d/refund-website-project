@@ -488,15 +488,19 @@ const Index = () => {
                 Мы быстро проведём первичный анализ ситуации и предложим конкретный план действий
               </p>
 
-              <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-12">
-                <Button size="lg" variant="secondary" className="text-xl px-10 py-8 h-auto">
-                  <Icon name="Phone" className="mr-3 h-6 w-6" />
-                  +7 (___) ___-__-__
-                </Button>
-                <Button size="lg" variant="outline" className="text-xl px-10 py-8 h-auto bg-white/10 hover:bg-white/20 border-white/30 text-white">
-                  <Icon name="Mail" className="mr-3 h-6 w-6" />
-                  info@example.com
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
+                <a href="tel:+70000000000" className="inline-block">
+                  <Button size="lg" variant="secondary" className="text-xl px-10 py-8 h-auto">
+                    <Icon name="Phone" className="mr-3 h-6 w-6" />
+                    +7 (___) ___-__-__
+                  </Button>
+                </a>
+                <a href="mailto:info@example.com" className="inline-block">
+                  <Button size="lg" variant="outline" className="text-xl px-10 py-8 h-auto bg-white/10 hover:bg-white/20 border-white/30 text-white">
+                    <Icon name="Mail" className="mr-3 h-6 w-6" />
+                    info@example.com
+                  </Button>
+                </a>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mt-16 pt-12 border-t border-white/20">
