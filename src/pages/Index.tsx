@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const services = [
     {
@@ -71,9 +74,55 @@ const Index = () => {
             <a href="#team" className="text-sm font-medium hover:text-primary transition-colors">О команде</a>
             <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Контакты</a>
           </nav>
-          <Button size="sm" className="hidden md:flex">
-            Консультация
-          </Button>
+          <div className="hidden md:flex">
+            <Button size="sm">
+              Консультация
+            </Button>
+          </div>
+          
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Icon name="Menu" className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col gap-6 mt-8">
+                <a 
+                  href="#services" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Услуги
+                </a>
+                <a 
+                  href="#directions" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Направления
+                </a>
+                <a 
+                  href="#team" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  О команде
+                </a>
+                <a 
+                  href="#contact" 
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Контакты
+                </a>
+                <Button size="lg" className="mt-4" onClick={() => setIsOpen(false)}>
+                  <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
+                  Консультация
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </header>
 
