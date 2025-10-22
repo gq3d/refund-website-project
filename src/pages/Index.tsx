@@ -303,9 +303,9 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               { value: '2008', label: 'Год основания', icon: 'Calendar' },
-              { value: '$2.4M+', label: 'Возвращено средств', icon: 'DollarSign' },
-              { value: '180+', label: 'Успешных кейсов', icon: 'TrendingUp' },
-              { value: '87%', label: 'Успешность', icon: 'Award' },
+              { value: '$1.1M', label: 'Возвращено средств', icon: 'DollarSign' },
+              { value: '26', label: 'Успешных кейсов', icon: 'TrendingUp' },
+              { value: '72%', label: 'Успешность', icon: 'Award' },
             ].map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
                 <Card className="border-primary/20 hover:shadow-xl transition-all hover:scale-105">
