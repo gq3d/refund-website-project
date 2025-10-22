@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ServicesPage from "./pages/ServicesPage";
 import AmlCleaningPage from "./pages/services/AmlCleaningPage";
 import AmlAnalysisPage from "./pages/services/AmlAnalysisPage";
 import RedFlagsPage from "./pages/services/RedFlagsPage";
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/aml-cleaning" element={<AmlCleaningPage />} />
           <Route path="/services/aml-analysis" element={<AmlAnalysisPage />} />
           <Route path="/services/red-flags" element={<RedFlagsPage />} />
