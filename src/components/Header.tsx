@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,10 +10,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <Icon name="DollarSign" className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold text-primary">Вернём вам деньги</span>
-        </div>
+        </Link>
         <nav className="hidden md:flex gap-6">
           <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
           <a href="#directions" className="text-sm font-medium hover:text-primary transition-colors">Направления</a>
